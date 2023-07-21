@@ -1,0 +1,83 @@
+###Sign up
+
+POST localhost/api/v1/sign-up
+Content-Type: application/json
+
+{
+  "email": "polina.brigadirenko@mail.ru",
+  "password": "qwerty2243435S",
+  "firstName": "Полина",
+  "lastName": "Бригадиренко"
+}
+
+### Login
+###polina.brig@gmail.com
+
+POST localhost/api/v1/login
+Content-Type: application/json
+
+{
+  "email": "polina.brig@gmail.com",
+  "password": "qwerty2243435S"
+}
+
+### Add project
+
+POST localhost/api/v1/projects
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+{
+  "name": "ML project new 1.0"
+}
+
+### Update project
+
+PUT localhost/api/v1/projects/10
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+{
+  "name": "ML project new 1.1"
+}
+
+### Get project of account
+
+GET localhost/api/v1/projects/10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+### Get projects of account
+
+GET localhost/api/v1/projects?page=0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+### Delete project of account
+
+DELETE localhost/api/v1/projects/10
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+### Add task
+
+POST localhost/api/v1/projects/2/tasks
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+{
+  "name": "Find dataset 2.2",
+  "duration": 45
+}
+
+### Get tasks of account project
+
+GET localhost/api/v1/projects/2/tasks?page=0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+### Get task of account project
+
+GET localhost/api/v1/projects/2/tasks/4
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
+
+### Logout
+
+GET localhost/api/v1/logout
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDU2NTI1MCwiZW1haWwiOiJwb2xpbmEuYnJpZ0BnbWFpbC5jb20ifQ.Y54bIdq2Gv1aST7SppHh0upzkH0LjWZrU142kZsru-I
