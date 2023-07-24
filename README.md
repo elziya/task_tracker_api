@@ -19,4 +19,4 @@ Cайт для отслеживания времени, затраченного
 * FreeMarker
 * JWT
 * Swagger
-* Lombock
+* Lombok
