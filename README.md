@@ -8,11 +8,12 @@ Cайт для отслеживания времени, затраченного
 
 ## Технологии:
 * Spring Boot
-* Redis
-* PostgreSQL
-* Rest API
 * Spring Security
 * Spring Data JPA
+* Redis
+* PostgreSQL
+* JUnit
+* Rest API
 * Hibernate
 * Maven
 * JavaMail
